@@ -5,7 +5,7 @@ let currentPos = window.pageYOffset;
 const callDistort = function() {
     const newPos = window.pageYOffset;
     const diff = newPos - currentPos;
-    const speed = diff * 0.2;
+    const speed = diff * 0.1;
 
     content.style.transform = "skewY("+speed+"deg)";
 
