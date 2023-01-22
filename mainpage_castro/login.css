@@ -1,0 +1,233 @@
+body{
+    width:100%;
+    height: 150vh;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position:fixed;
+    margin: 0px;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background: linear-gradient(rgb(132, 236, 255), white) no-repeat;
+    background-size: cover;    
+    
+}
+
+body{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 10px;
+}
+.content {
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    animation: entrance 3s forwards;
+
+}
+.tuyok {
+    z-index: -2;
+    position: absolute;
+    left: -200px;
+    top: -300px;
+    animation: entrance 3s forwards;
+}
+
+.tuyok img {
+    width: 900px;
+    height: auto;
+    animation: myworld 150s infinite;
+
+}
+@keyframes entrance {
+    from {
+        transform: scale(1.3);
+    }
+    to {
+        transform:scale(1);
+    }
+}
+@keyframes myworld {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    column-gap:-20px;
+
+}
+
+.header h1:first-child{
+    font-family: Century Gothic,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 68, 30);
+    font-size: 1.4rem;
+    margin-bottom: -30px;
+}
+
+.header a {
+    text-decoration: none;
+}
+#earth{
+    font-family: Century Gothic,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: -20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(0, 68, 30);
+}
+#green{
+    font-family: Century Gothic,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    color: rgb(85, 150, 0);
+}
+#login{
+    font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
+
+.main{
+    border: solid rgba(0, 0, 0, 0.116) 10px;
+    border-radius: 25px;
+    background-image: url('images/floaterimage.png');
+    background-color: rgba(49, 248, 255, 0.219);
+    margin-bottom: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction:column;
+    color: white;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding-bottom: 25px;
+    margin-top: 50px;
+    align-items: center;
+    
+}
+.main label{
+    padding-left: 5px;
+    margin-top: 20px;
+    font-family: Century Gothic;
+    color: rgb(0, 68, 30);
+    font-weight:bold;
+}   
+.inner input {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.644);
+    font-family: Century Gothic;
+    transition: 1s;
+    color: rgb(0, 68, 30);
+}
+
+.main input::placeholder {
+    color: rgb(0, 68, 30);
+}
+
+
+.inner input:focus,
+.inner input:valid{
+    background-color: #fad921;
+}
+
+
+
+#em, #pass {
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+
+}
+.main .loginbutton{
+    background-color: white;
+    color:black;
+    font-family:Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    border:none;
+    align-items: center;   
+    margin: 20px;  
+    border-radius: 50px;
+    transition: .5s;
+    background-image: url('images/earth.png');
+    background-size: 150px;
+}
+
+.main .loginbutton:active{
+    background-color: mediumseagreen;
+    color: white;
+}
+
+
+.emtext{
+    
+    height: 20px;
+    width: 320px;
+    border-radius: 10px;
+    border: solid rgb(10, 51, 10) 2px;
+    padding: 10px;
+
+}
+ .passtext{
+   
+    height: 20px;
+    width: 320px;
+    border-radius: 10px;
+    border: solid rgb(10, 51, 10) 2px;
+    padding: 10px;
+ 
+}
+
+.lower{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.main a{
+    font-family: Century Gothic, serif;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+ 
+
+}
+
+.lower .frgt:active {
+    color: #fad921;
+}
+
+.lower .crtaccnt {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(85, 150, 0);
+}
+
+.lower p {
+    font-family: Century Gothic;
+}
+.inner h2 {
+    color: rgb(0, 68, 30);
+    text-align: center;
+
+}
+
+
+

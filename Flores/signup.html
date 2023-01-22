@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signing In</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="formvalid.js"></script>
+</head>
+<body>
+    <section class="wrapper">
+        <div class="background">
+            <img src="images/background 1.png" class="background1">
+            <img src="images/signback2.png" class="background2">
+            <img src="images/signback3.png" class="background3">
+            <img src="images/signback4.png" class="background4">
+            <img src="images/signback5.png" alt="" class="background5">
+            <img src="images/signback6.png" class="foreground5">
+            <div class="floater">
+                <form  name="signchuchu" action="/index.html" target="_blank" onsubmit="return Signval()" method="post" >
+                <h2>Create Account</h2>
+                <div class="info">
+                    
+                    <div class="name">
+                        <div class="inputbox" >
+                            <input type="Name" name="FIRST" >
+                            <span>First Name</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox" >
+                            <input type="Name" name="SECOND">
+                            <span>Last Name</span>
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="inputbox" >
+                    <input type="Username"  name="EMAIL" >
+                    <span>Email</span>
+                    <i></i>
+                    </div>
+                    <div class="pass">
+                        <div class="inputbox" >
+                            <input  type="password" name="PASS">
+                            <span>Password</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="Password" name="CONFIRM" >
+                            <span>Confirm Password</span>
+                            <i></i>
+                        </div>
+                    </div>
+                    
+                    <p><input type="checkbox" name="checkbox" id="agreement"> Agree to Terms and Conditions. </p>
+                    
+                </div>
+                <button class="signin" type="submit" onclick="return signval()">Sign up</button>
+                <div class="login"> <p>
+                        Already a member? 
+                        <a href="login.html">Login</a>
+                    </p> 
+                </div>
+            </div>
+           
+        </div>
+        </form>
+        </div>
+        <div class="footer">
+           <a href="index.html" ><div class="home">
+                Jay
+            </div></a>
+            <div class="click" ">
+                &uarr; <br>
+                home 
+            </div>
+            </div>
+    </section>
+        
+</body>
+</html>

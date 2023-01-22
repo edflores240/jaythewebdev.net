@@ -1,0 +1,501 @@
+@font-face {
+    font-family: poppins;
+    src: url('fonts/Poppins-Light.ttf') format( 'TrueType' );
+    font-weight: normal;
+}
+@font-face {
+    font-family: poppins-bold;
+    src: url('fonts/Poppins-Black.ttf') format( 'TrueType' );
+}
+
+@font-face {
+    font-family: poppinsB;
+    src: url('fonts/Poppins-Bold.ttf') format('TrueType');
+}
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', Century Gothic, sans-serif;
+    background-color: #fb8f16;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+
+*, html {
+    scroll-behavior: smooth !important;
+}
+.title {
+    font-size: 12vw;
+    font-family: poppins-bold;
+    text-align: left;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    background: linear-gradient(120deg,rgb(255, 198, 93),rgb(255, 175, 26), rgb(100, 2, 79), rgb(255, 13, 215));
+    color: rgba(255, 255, 255, 0);
+    -webkit-background-clip: text;
+    position:relative;
+    transform-style: preserve-3d;
+    top: 1%;
+    right: -10%;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    animation: titleanime 10s forwards;
+}
+@keyframes titleanime {
+    from {
+        transform: translateZ(-4px) scale(1.7);
+    }
+    to {
+        transform: translateZ(-4px) scale(1.5);
+    }
+
+}
+h1 a {
+    color: rgb(247, 211, 113);
+}
+h1 a:visited{
+    color: rgb(247, 211, 113);
+}
+
+
+
+span.aplido{
+    font-size: 100%;
+    font-family: poppins-bold;
+    text-align: left;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    background: linear-gradient(120deg,rgb(255, 198, 93),rgb(255, 175, 26), rgb(100, 2, 79), rgb(255, 13, 215));
+    color: rgba(255, 255, 255, 0.158);
+    -webkit-background-clip: text;
+    position:relative;
+    transform-style: preserve-3d;
+    top: 1%;
+    right: -20%;
+    animation: aplidoanime 10s forwards;
+}
+
+@keyframes aplidoanime{
+    from {
+        transform: translateZ(-4px) scale(1.7);
+    }
+    to {
+        transform: translateZ(-4px) scale(1.5);
+    }
+
+}
+
+.submit {
+    font-size: 100%;
+    text-align: left;
+    display: flex;
+    z-index: 1;
+    color: #3f091f;
+    transform: translateZ(-8px) scale(1.9);
+    position:relative;
+    transform-style: preserve-3d;
+    bottom: -35%;
+    right: -15%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    height: 100%;
+    z-index: -1;
+}
+
+
+header img{
+    position: absolute;
+    object-fit: cover;
+}
+
+.welcome {
+    font-size: 3rem;
+    min-width: 80%;
+    color: #fb8f16;
+    font-family: poppinsB;
+    text-align: center;
+}
+
+@media screen and (max-width:570px) {
+    .welcome {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width:870px) {
+    .button p {
+        font-size: 15px;
+        color: white
+
+    }
+}
+.welcoming {
+    text-align: center;
+
+}
+.background1 {
+    z-index: -1;
+    transform: translateZ(-10px) scale(2.1);
+    
+}
+
+.background2 {
+    z-index: -1;
+    animation: rise 10s forwards;
+    
+}
+@keyframes rise{
+    from {
+        transform: translateZ(-9px) scale(1.9);
+    }
+    to {
+        transform: translateZ(-9px ) scale(2.3);
+    }
+}
+
+.background3 {
+    z-index: -1;
+    animation: back3 10s forwards;
+}
+    
+@keyframes back3{
+    from {
+        transform: translateZ(-8px) scale(2.1);
+    }
+    to {
+        transform: translateZ(-9px ) scale(1.9);
+    }
+}
+
+.background4 {
+    z-index: 1;
+    pointer-events: none;
+    transform: translateZ(-4px ) scale(1.5);
+
+}
+    
+
+.foreground5 {
+    z-index: 1;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+
+
+
+section.content{
+
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    margin-top: -2px;
+
+}
+
+.content div.button {
+
+    border-radius: 50px;
+    width: 50%;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateZ(-5) scale(1.5);
+    position: relative;
+    margin: 0px;
+ 
+}
+
+
+section.content {
+    width: 100%;
+    background-color: #3f091f;
+    padding-bottom: 200px;
+
+}
+
+.boat {
+    height: 200px;
+    width: 200px;
+    -webkit-animation: mymoves 50s;
+    animation: mymove 60s infinite;
+    z-index:-1;
+}
+
+@-webkit-keyframes mymove {
+   0%{transform: translateZ(-5px) translateY(150px) translateX(-1200px) scale(2);}
+   50%{transform:translateZ(-6px) translateY(150px) translateX(100px) scale(2);}
+   100%{transform:translateZ(-5px) translateY(150px) translateX(1500px) scale(2);}
+}
+
+.AkongFace {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#a2550e00, #d2950800);
+    border-radius: 50%;
+    outline: solid white 4px;
+    transition: 1s;
+
+}
+
+
+
+
+.signin {
+    background-color: #fb8f16;
+    border: 0px;
+    padding: 15px;
+    min-width: 200px;
+    border-radius: 25px;
+    
+    transition: .5s;
+    font-family:poppins,century Gothic; 
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.slider {
+    padding: 0px;
+
+    margin-top: 200px;
+    
+}
+
+.signin p{
+    color: white;
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.gradient {
+    height: 100%;
+    width: 500px;
+    background: linear-gradient(90deg, #fb8f16, rgb(163, 22, 182) );
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transition: 1s;
+    z-index: 1;
+    
+    
+
+}
+
+a.slider:hover .gradient{
+    left: -130%;
+}
+
+a.slider:active .gradient {
+    background: white;
+}
+a.slider:active p {
+    color:#3f091f;
+}
+
+
+.signin:hover {
+    transform: translate(0px, -4px);
+    
+}
+
+.signin:active{
+    box-shadow: 0 4px 30px rgb(255, 230, 0);
+    background-color: white;
+    color: #d29708;
+    font-size: 1.1rem;
+    transition: .05s;
+
+}
+
+
+.login {
+    background-color: #49073500;
+    border: 0px;
+    min-width: 30px;
+    border-radius: 25px;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-bottom: 50px;
+    transition: 1s;
+    font-family:poppinsB,century Gothic; 
+  
+}
+
+.login:hover {
+    background-color: rgb(255, 255, 255);
+    color: #9b096f;
+    transform: translate(0px, -4px);
+    
+    
+}
+
+.login:active{
+    box-shadow: 0 4px 30px rgb(255, 230, 0);
+    background-color: white;
+    color: #d29708;
+    transition: .05s;
+   
+
+}
+
+.button p {
+    font-size: 15px;
+    align-items: center;
+
+    text-align: center;
+    justify-content: center;
+
+}
+
+/* All about me */
+section.ako{
+    background-color: #fb901600;
+    margin-top:-30px ;
+    border: #3f091f;
+    perspective: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 1;
+
+
+    
+
+}
+/* .Me {
+    transform: translateZ(-5px) scale(1);
+    z-index: 6;
+    transform-style: preserve-3d;
+} */
+
+.Me img.fore {
+    object-fit: cover;
+    position: absolute;
+
+}
+
+.fore {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    transform: translateZ(-5px) scale(1);
+}
+section.ako div.information{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    transform: translateZ(-5px) scale(1.7);
+    z-index: -2;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+
+    
+    
+
+}
+
+.information p.name{
+    margin-bottom: -20px;
+    font-family: poppinsB;
+    width: 50%;
+    height: 5%;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    transition: 1.5s;
+
+   
+}
+p.bsit {
+    margin-bottom: -20px;
+    font-family: poppinsB;
+    width: 100px;
+    height: 5%;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    transition: 1.5s;
+
+}
+.information h2{
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-family: poppinsB;
+    color: #3f091f;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    position: relative;
+    
+}
+
+.information h2:hover ~ .AkongFace,
+p.name h2:hover ~ .AkongFace{
+
+        display: inline-block;
+        transform: translateY(-20px);
+        background-color:#3f091f;
+        outline: white;
+
+}
+.information p {
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: 1.5s;
+
+
+  
+}
+
+.digitalface {
+    object-fit: cover;
+    display: flex;
+    transform: translateZ(-10px) ;
+    margin-top: -700px;
+    pointer-events: none;
+    z-index:-1;
+    position:absolute;
+    transition: 1.5s ;
+}

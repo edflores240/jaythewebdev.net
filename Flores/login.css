@@ -1,0 +1,417 @@
+@font-face {
+    font-family: poppins;
+    src: url('fonts/Poppins-Light.ttf') format( 'TrueType' );
+    font-weight: normal;
+}
+@font-face {
+    font-family: poppins-bold;
+    src: url('fonts/Poppins-Black.ttf') format( 'TrueType' );
+}
+
+@font-face {
+    font-family: poppinsB;
+    src: url('fonts/Poppins-Bold.ttf') format('TrueType');
+}
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', Century Gothic, sans-serif;
+    background-color: #3f091f;
+
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+
+*, html {
+    scroll-behavior: smooth !important;
+}
+
+.background {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    height: 100%;
+    z-index: -1;
+    
+}
+.background img{
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.background1 {
+    z-index: -1;
+    transform: translateZ(-10px) scale(2.1);
+    
+}
+
+.background2 {
+    z-index: -1;
+    animation: rise 10s forwards;
+    
+}
+@keyframes rise{
+    from {
+        transform: translateZ(-9px) scale(1.9);
+    }
+    to {
+        transform: translateZ(-9px ) scale(2.3);
+    }
+}
+
+.background3 {
+    z-index: -1;
+    animation: back3 10s forwards;
+}
+    
+@keyframes back3{
+    from {
+        transform: translateZ(-8px) scale(2.1);
+    }
+    to {
+        transform: translateZ(-9px ) scale(1.9);
+    }
+}
+
+.background4 {
+    z-index: 1;
+    pointer-events: none;
+    transform: translateZ(-4px ) scale(1.5);
+
+}
+    
+
+.foreground5 {
+    z-index: 2;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scale(1.2);
+
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+
+
+
+section.content{
+    background-color:#f99c0700;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    margin-top: -2px;
+
+}
+
+.content div.button {
+    box-shadow: 0 10px 100px -20px rgb(54, 0, 38);
+    border-radius: 50px;
+    width: 50%;
+    background-color: #3f091f ;
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateZ(-5) scale(1.5);
+    position: relative;
+    margin: 0%;
+ 
+ 
+
+}
+
+section.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    padding: 100px;
+    background-color: #3f091f;
+  
+
+}
+
+.boat {
+    height: 200px;
+    width: 200px;
+    -webkit-animation: mymoves 50s;
+    animation: mymove 60s infinite;
+    z-index:-1;
+}
+
+@-webkit-keyframes mymove {
+   0%{transform: translateZ(-5px) translateY(150px) translateX(1500px) scale(2);}
+   50%{transform:translateZ(-6px) translateY(150px) translateX(100px) scale(2);}
+   100%{transform:translateZ(-5px) translateY(150px) translateX(-1200px) scale(2);}
+}
+.footer {
+    background-color: #3f091f;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    margin-top: 1;
+
+
+}
+
+.floater {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    position:relative;
+    z-index: 1;
+    width: 400px;
+    height: 480px;
+    padding: 50px 40px;
+    padding-top: 100px;
+    border-radius: 25px;
+    transition: 3s;
+    animation: floatanime 1s forwards;
+
+}
+
+@-webkit-keyframes floatanime {
+
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.floater h2 {
+    font-family: 'poppins-black', Century Gothic ;
+    font-size:2rem;
+    color: #3f091f;
+}
+
+ .inputbox{
+    position:relative;
+    width: 300px;
+    margin-bottom: 50px;
+}
+.inputbox input{
+   position:relative;
+}
+.inputbox input {
+    width: 90%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border:none;
+    outline:none;
+    color: #fb9016; 
+    font-size:1em ;
+    z-index:10;
+}
+
+.inputbox span {
+    position: absolute;
+     left: 0;
+    padding: 20px 10px 10px;
+    letter-spacing: 0.05em;
+    font-size:1em ;
+    transition: 1s;
+    pointer-events: none;
+
+}
+
+.inputbox input:focus ~ span,  
+.inputbox input:valid ~ span  {
+    color: #fffefe;
+    transform: translateY(35px);
+    font-size:0.9rem;
+
+}
+
+ .inputbox i {
+    left:0;
+    bottom: 0;
+    background-color: #3f091f;
+    border-radius:10px;
+    width:100%;
+    height:2px;
+    position:absolute;
+    pointer-events:none;
+    transition: 1s;
+    z-index:8;
+
+   
+}
+
+.inputbox input:focus ~ i,  
+.inputbox input:valid ~ i{
+    height: 40px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    margin-top: -43px;
+    margin-bottom: 30px;
+    position:relative;
+    width: 70%;
+
+    
+}
+
+.link a {
+    color: #3f091f;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'poppinsB', Century Gothic;
+    text-align: right;
+    width: 100%;
+    position: relative;
+
+}
+.link a:hover{
+    color: #fb9016;
+}
+
+.signup {
+    display: flex;
+    width: 70%;
+}
+
+.signup a {
+    text-decoration: none;
+    color: #fb9016;
+    font-family: poppinsB, Century Gothic;
+}
+
+.signup a:hover{
+    color: white;
+}
+
+
+.login {
+    width: 75%;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-family: poppinsB, Century Gothic;
+    background-color: #fb9016;
+    color: #3f091f;
+    transition: .5s;
+}
+
+.login:hover {
+    background-color: #3f091f;
+    color: #fb9016;
+    transform: translate(0px,-4px) scale(1.08);
+    
+}
+.login:active {
+    background-color: white;
+    color: #3f091f;
+    font-size:1.05rem;
+    transition: 0.1s;
+
+}
+
+.face {
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.home {
+    font-size: 100px;
+    font-family: poppins-bold, Century Gothic;
+    width: 300px;
+    border-radius: 40px;
+    text-align: center;
+    transition: 1s;
+    animation: backgrounds 20s infinite ;
+    -webkit-text-stroke: 2px white;
+}
+
+
+@keyframes backgrounds {
+
+    0% {
+        color: #3f091f;
+
+    }
+
+    25% {
+        color: #fb9016;
+    }
+    
+    50% {
+        color: #3f091f;
+    }
+
+    75% {
+        color: white;
+    }
+    100% {
+        color: #3f091f;
+    }
+}
+
+.home:hover {
+    
+    box-shadow: 0 4px 30px rgb(255, 230, 0);
+    transition: 2s;
+    transform: translate(0px, -20px);
+    cursor: pointer;
+    
+}
+
+.click {
+    text-align: center;
+    font-size: 20px;
+    font-family: poppinsB;
+    color: #fb9016;
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    
+}
+
+.footer a {
+    text-decoration: none;
+}
+

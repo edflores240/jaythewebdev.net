@@ -1,0 +1,398 @@
+@font-face {
+    font-family: poppins;
+    src: url('fonts/Poppins-Light.ttf') format( 'TrueType' );
+    font-weight: normal;
+}
+@font-face {
+    font-family: poppins-bold;
+    src: url('fonts/Poppins-Black.ttf') format( 'TrueType' );
+}
+
+@font-face {
+    font-family: poppinsB;
+    src: url('fonts/Poppins-Bold.ttf') format('TrueType');
+}
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', Century Gothic, sans-serif;
+    background-color: #3f091f;
+    height: 80vh;
+
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+
+*, html {
+    scroll-behavior: smooth !important;
+}
+
+.wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: -2;
+    perspective: 10px;
+    height: 100vh;
+    padding-bottom: -100px;
+ 
+    
+}
+
+.background {
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    flex-direction: column;
+    align-items: center;
+    transition: 2s;
+}
+
+.background img {
+    object-fit: cover;
+    position: absolute;
+    transform-style:preserve-3d ;
+    transition: 1s;
+    pointer-events: none;
+    animation: gwapo 5s forwards;
+}
+
+
+
+.background1 {
+    transform: translateZ(-12px) scale(2.3);
+}
+
+.background2 {
+    transform: translateZ(-11px) scale(2.1);
+}
+
+.background3 {
+    transform: translateZ(-10px) scale(2.1);
+}
+
+.background4 {
+    transform: translateZ(-8px) scale(1.9);
+}
+
+.background5 {
+    transform: translateZ(-5px) scale(1.5);
+
+}
+
+.foreground5 {
+    pointer-events: none;
+    z-index: 3;
+}
+
+
+
+
+
+.footer {
+    margin-top: -2px;
+    width: 100%;
+    height: 50%;
+    background-color: #3f091f;
+    position: absolute;
+
+
+  
+}
+
+.floater {
+    align-items: center;
+    width: 600px;
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    /* border: solid #fb9016 2.5px;
+    backdrop-filter: blur(5px); */
+    z-index:2;
+    animation: floater 5s forwards;
+    position: relative;
+
+}
+@-webkit-keyframes floater {
+
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    .name {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+       
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.floater h2 {
+    font-family: 'poppins-black', Century Gothic ;
+    font-size:2rem;
+    color: #3f091f;
+    width: 50%;
+    text-align: center;
+
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.name {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+
+.info .pass {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width:630px) {
+    .name {
+        width: 70%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info .pass {
+        width: 70%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .floater {
+        z-index: 4;
+    }
+       
+}
+
+
+
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    position:relative;
+    justify-content: center;
+    margin: 20px;
+    height: 40px;
+    
+} 
+
+.inputbox input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 93%;
+    height: 30px;
+    position: absolute;
+    z-index: 3;
+    padding-left: 10px;
+    padding-right: -10px;
+    color:#fb9016;
+    font-size:1em ;
+    font-family: poppins, Century Gothic;
+
+}
+
+.inputbox span {
+    font-size:1.1rem ;
+    color: #3f091f;
+    font-family: poppins;
+    transition: 1s;
+    padding-left: 10px;
+    width: 100%;
+   
+}
+
+.inputbox i {
+    background-color: #3f091f;
+    height: 2px;
+    width: 100%;
+    z-index: 2;
+    border-radius: 10px;
+    bottom: 0px;
+    transition: 1s;
+    position: absolute;
+}
+
+.inputbox input:focus ~ span,
+.inputbox input:valid ~ span,
+.inputbox input:active ~ span {
+    transform: translate(0px, -35px);
+    font-size: 0.9rem ;
+    color: white;
+    letter-spacing: 2 rem;
+
+} 
+
+.inputbox input:focus ~ i,
+.inputbox input:valid ~ i {
+    height: 40px;
+
+
+}
+
+button.signin {
+    width: 60%;
+    font-size: 1.1rem;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    margin-top: 40px;
+    font-family: poppinsB, Century Gothic;
+    background-color: #fb9016;
+    color: #3f091f;
+    transition: .5s;
+    cursor: pointer;
+}
+.signin:hover {
+    background-color: #3f091f;
+    color: #fb9016;
+    transform: translate(0px,-4px) scale(1.08);
+    
+}
+.signin:active {
+    background-color: white;
+    color: #3f091f;
+    font-size:1.05rem;
+    transition: 0.1s;
+
+}
+
+.login {
+    color: white;
+}
+
+.login a {
+    text-decoration: none;
+    color: #fb9016;
+    font-family: poppinsB, Century Gothic;
+
+}
+.login a:hover{
+    color: white;
+}
+.footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.home {
+    font-size: 100px;
+    font-family: poppins-bold, Century Gothic;
+    width: 300px;
+    border-radius: 40px;
+    text-align: center;
+    transition: 1s;
+    animation: backgrounds 20s infinite ;
+    -webkit-text-stroke: 2px white;
+}
+
+
+@keyframes backgrounds {
+
+    0% {
+        color: #3f091f;
+
+    }
+
+    25% {
+        color: #fb9016;
+    }
+    
+    50% {
+        color: #3f091f;
+    }
+
+    75% {
+        color: white;
+    }
+    100% {
+        color: #3f091f;
+    }
+}
+
+.home:hover {
+    
+    box-shadow: 0 4px 30px rgb(255, 230, 0);
+    transition: 2s;
+    transform: translate(0px, -20px);
+    cursor: pointer;
+    
+}
+
+.click {
+    text-align: center;
+    font-size: 20px;
+    font-family: poppinsB;
+    color: #fb9016;
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    
+}
+
+.footer a {
+    text-decoration: none;
+}
